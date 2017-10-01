@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'home','uses' => 'TweetsController@index']);
+Route::resource('tweets', 'TweetsController');
